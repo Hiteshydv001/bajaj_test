@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import re
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for frontend requests
 
 @app.route("/bfhl", methods=["POST"])
 def process_data():
